@@ -11,8 +11,8 @@ Installing OpenCraft on your system is very simple. It is available for Linux an
 #### Linux
 1. First, make sure you have installed all the needed tools:
 - GCC (GNU Compiler Collection)
-- Raylib (for C)
-- BASH (Bourne-Again SHell)
+- CMake
+- BASH (or any other shell)
 - OpenGL 3.x support
 
 2. Clone this repository:
@@ -23,8 +23,8 @@ git clone https://github.com/PlayCrazyOff/opencraft
 3. Build it from the sources
 ```bash
 cd opencraft
-chmod +x build.sh
-./build.sh
+cmake .
+make
 ```
 
 4. Run the game
@@ -36,18 +36,18 @@ chmod +x build.sh
 
 #### Windows
 1. First, make sure you have installed all the needed tools:
-- MinGW
-- Raylib (for C)
-- BATCH
+- Visual Studio community (2022 or any other with cmake support)
 - OpenGL 3.x support
 
 2. Download the source code of this repository.
 
-3. Execute `build.bat`.
+3. in Visual Studio open the repo has a CMake project
 
-4. Run the game (`opencraft.exe`).
+4. build the game inside Visual Studio
 
-5. Enjoy!
+5. Run the game (`opencraft.exe`).
+
+6. Enjoy!
 
 ## Versions
 See the full versions history [here](HISTORY.md).
