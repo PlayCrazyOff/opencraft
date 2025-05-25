@@ -50,7 +50,9 @@ chmod +x build.sh
 5. Enjoy!
 
 ## Versions
-**LAST RELEASED** - Version 0.0:
+See the full versions history [here](HISTORY.md).
+
+Version 0.0:
 - Flat world generation
 - Player / camera movements
 

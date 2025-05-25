@@ -17,8 +17,7 @@ int main()
     // Define the player
     Player player;
     
-    // Create the window in fullscreen and hide the mouse
-    SetConfigFlags(FLAG_FULLSCREEN_MODE);
+    // Create the window and hide the mouse
     InitWindow(800, 600, "OpenCraft 0.0");
     HideCursor();
 
@@ -34,6 +33,7 @@ int main()
 
     // Set the position of the mouse
     SetMousePosition((int)screen.center.x, (int)screen.center.y);
+    mouse.texture = LoadTexture("assets/cursor.png");
 
     // Main loop
     while (!WindowShouldClose())
@@ -45,7 +45,7 @@ int main()
         */
         mouse_Set(&mouse, GetMousePosition(), mouse.position.x - screen.center.x, mouse.position.y - screen.center.y);
 
-        camera.yaw += mouse.delta_x * camera.sensitivity;
+        camera.yaw -= mouse.delta_x * camera.sensitivity;
         camera.pitch -= mouse.delta_y * camera.sensitivity;
 
         if (camera.pitch > 1.5533f) camera.pitch = 1.5533f;
@@ -72,21 +72,28 @@ int main()
 
         BeginDrawing();
 
-        BeginMode3D(camera.camera);
+            BeginMode3D(camera.camera);
 
-            ClearBackground(BLUE);
+                ClearBackground(BLUE);
 
-            // Draw the world
-            player.position = camera.camera.position;
-            world_DrawWorld(player);
+                // Draw the world
+                player.position = camera.camera.position;
+                world_DrawWorld(player);
 
-        EndMode3D();
+            EndMode3D();
+
+            Vector2 drawPos = {
+                screen.center.x - (mouse.texture.width / 2.0f) / 2.0f,
+                screen.center.y - (mouse.texture.height / 2.0f) / 2.0f
+            };
+
+            DrawTextureEx(mouse.texture, drawPos, 0.0f, 2.0f, WHITE);
 
         EndDrawing();
     }
 
     // Free memory
-
+    UnloadTexture(mouse.texture);
     CloseWindow();
 
     return 0;

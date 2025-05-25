@@ -7,6 +7,7 @@ typedef struct
 {
     Vector2 position;
     float delta_x, delta_y;
+    Texture2D texture;
 } Mouse;
 
 void mouse_Set(Mouse *mouse, Vector2 position, float delta_x, float delta_y);
