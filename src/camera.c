@@ -1,4 +1,4 @@
-#include "../include/camera.h"
+#include "camera.h"
 
 void camera_Create(MainCamera *main_camera, Camera3D *camera, Vector3 position, Vector3 target, Vector3 up, int fovy, int projection)
 {

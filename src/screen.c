@@ -1,4 +1,4 @@
-#include "../include/screen.h"
+#include "screen.h"
 
 void screen_SetParams(Screen *screen, float width, float height, Vector2 center)
 {
