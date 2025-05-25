@@ -52,9 +52,5 @@ chmod +x build.sh
 ## Versions
 See the full versions history [here](HISTORY.md).
 
-Version 0.0:
-- Flat world generation
-- Player / camera movements
-
 ## How to contribute?
 You can contribute [here](CONTRIBUTING.md)!
