@@ -1,4 +1,4 @@
-#include "../include/mouse.h"
+#include "mouse.h"
 
 void mouse_Set(Mouse *mouse, Vector2 position, float delta_x, float delta_y)
 {

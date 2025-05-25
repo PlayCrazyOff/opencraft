@@ -1,4 +1,4 @@
-#include "../include/world.h"
+#include "world.h"
 
 void world_DrawWorld(Player player)
 {    

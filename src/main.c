@@ -3,10 +3,10 @@
 #include <raylib.h>
 #include <math.h>
 
-#include <include/world.h>
-#include <include/camera.h>
-#include <include/mouse.h>
-#include <include/screen.h>
+#include "world.h"
+#include "camera.h"
+#include "mouse.h"
+#include "screen.h"
 
 int main()
 {

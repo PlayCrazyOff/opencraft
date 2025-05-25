@@ -1,3 +1,26 @@
 .vscode/
 
-opencraft.exe
+#build and object files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+build
+out
+bin
+opencraft
+
+#cmake cache
+CMakeCache.txt
+CMakeFiles
+*.cmake
+_deps
+
+##generated makefiles
+[Mm]akefile
+
+#vscode cache
+.vs
